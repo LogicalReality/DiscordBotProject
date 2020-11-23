@@ -1,4 +1,5 @@
 import discord
+import os
 #import twint_config.py
 from discord.ext import commands
 
