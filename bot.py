@@ -20,7 +20,7 @@ async def precio(ctx):
     async with aiohttp.ClientSession() as session:
         async with session.get("https://monitordolarweb.com/gen_imagen/mdw.jpg") as resp:
             if resp.status != 200:
-                return await channel.send('Could not download file...')
+                return await ctx.send('Could not download file...')
             data = io.BytesIO(await resp.read())
             await ctx.send(file=discord.File(data, 'mdw.jpg'))
 
@@ -29,7 +29,7 @@ async def precio2(ctx):
     async with aiohttp.ClientSession() as session:
         async with session.get("https://monitordolarvenezuela.com/public/monitordolarweb.png") as resp:
             if resp.status != 200:
-                return await channel.send('Could not download file...')
+                return await ctx.send('Could not download file...')
             data = io.BytesIO(await resp.read())
             await ctx.send(file=discord.File(data, 'monitordolarweb.png'))
 
