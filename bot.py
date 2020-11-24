@@ -22,6 +22,6 @@ async def precio(ctx):
             if resp.status != 200:
                 return await channel.send('Could not download file...')
             data = io.BytesIO(await resp.read())
-            await channel.send(file=discord.File(data, 'mdw.jpg'))
+            await ctx.send(file=discord.File(data, 'mdw.jpg'))
 
 client.run(os.environ.get("token"))
