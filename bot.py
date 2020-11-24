@@ -5,7 +5,7 @@ import io
 import aiohttp
 
 client = commands.Bot(command_prefix = "$")  
-  
+
 @client.event
 async def on_ready():
     print("===== Bot is ready =====")
@@ -18,7 +18,7 @@ async def ping(ctx):
 @client.command()
 async def precio(ctx):
     async with aiohttp.ClientSession() as session:
-        async with session.get(https://monitordolarweb.com/gen_imagen/mdw.jpg) as resp:
+        async with session.get("https://monitordolarweb.com/gen_imagen/mdw.jpg") as resp:
             if resp.status != 200:
                 return await channel.send('Could not download file...')
             data = io.BytesIO(await resp.read())
