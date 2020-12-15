@@ -1,3 +1,3 @@
 # BotProject
 
-First Discord Bot project of my own.
+Discord Bot project of my own.
