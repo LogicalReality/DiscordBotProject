@@ -10,6 +10,7 @@ client = commands.Bot(command_prefix = "$")
 async def on_ready():
     print("===== Bot is ready =====")
     print(f"Latency {round(client.latency * 1000)}ms")
+    print("Hello world")
 
 @client.command()
 async def ping(ctx):
