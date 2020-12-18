@@ -4,7 +4,7 @@ from discord.ext import commands
 import io
 import aiohttp
 
-client = commands.Bot(command_prefix = "$")  
+client = commands.Bot(command_prefix = "$")
 
 @client.event
 async def on_ready():
@@ -23,14 +23,5 @@ async def precio(ctx):
                 return await ctx.send('Could not download file...')
             data = io.BytesIO(await resp.read())
             await ctx.send(file=discord.File(data, 'mdw.jpg'))
-
-@client.command()
-async def precio2(ctx):
-    async with aiohttp.ClientSession() as session:
-        async with session.get("https://monitordolarvenezuela.com/public/monitordolarweb.png") as resp:
-            if resp.status != 200:
-                return await ctx.send('Could not download file...')
-            data = io.BytesIO(await resp.read())
-            await ctx.send(file=discord.File(data, 'monitordolarweb.png'))
 
 client.run(os.environ.get("token"))
