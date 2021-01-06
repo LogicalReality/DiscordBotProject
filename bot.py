@@ -24,7 +24,7 @@ async def on_ready():
 async def ping(ctx):
     await ctx.send(f"Pong! --> {round(client.latency * 1000)}ms")
 
-@client.command():
+@client.command()
 async def saludo(ctx):
     quote = get_quote()
     await ctx.send(quote)
