@@ -28,8 +28,8 @@ async def precio(ctx):
             await ctx.send(file=discord.File(data, 'mdw.jpg'))
 
         async with session.get('https://zenquotes.io/api/random') as quote:
-            if r.status == 200:
+            if quote.status == 200:
                 js = await quote.json()
-                await channel.send(js['file'])
+                await ctx.send(js['file'])
 
 client.run(os.environ.get("token"))
