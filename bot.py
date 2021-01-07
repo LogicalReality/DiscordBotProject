@@ -33,6 +33,6 @@ async def quote(ctx):
         async with session.get('https://zenquotes.io/api/random') as quote:
             if quote.status == 200:
                 js = await quote.json()
-                await ctx.send(js['q'])
+                await ctx.send(js[0]['q'])
 
 client.run(os.environ.get("token"))
