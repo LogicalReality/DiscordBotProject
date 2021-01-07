@@ -29,6 +29,7 @@ async def precio(ctx):
 
 @client.command()
 async def quote(ctx):
+    async with aiohttp.ClientSession() as session:
         async with session.get('https://zenquotes.io/api/random') as quote:
             if quote.status == 200:
                 js = await quote.json()
