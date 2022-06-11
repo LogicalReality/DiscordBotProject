@@ -1,3 +1,7 @@
 # BotProject
 
-Discord Bot project of my own.
+Discord Bot project.
+
+It retrieves an image about current dollar price expressed in Bolivars (Venezuela Currency).
+
+It enables discord server to have an up-to-date source for the current dollar price.
