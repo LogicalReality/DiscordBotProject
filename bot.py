@@ -25,3 +25,5 @@ async def precio(ctx):
             await ctx.send(file=discord.File(data, 'mdw.jpg'))
 
 client.run(os.environ.get("token"))
+
+#Need to update URL, since the main website it gets the image from isn't working anymore
